@@ -21,6 +21,9 @@
     @include('partials.navbar')
 
     <div class="container">
+      @section('menu')
+        Contenido del menu
+      @show
       @yield('content')
     </div>
 
