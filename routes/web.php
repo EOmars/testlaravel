@@ -19,18 +19,10 @@ Route::get('auth/login', function() {
   return view('auth.login');
 });
 
-Route::get('catalog', function() {
-  return view('catalog.index');
-});
+Route::get('catalog','CatalogController@getIndex');
 
-Route::get('catalog/show/{id}', function() {
-  return view('catalog.show',['id' =>$id]);
-});
+Route::get('catalog/show/{id}','CatalogController@getShow');
 
-Route::get('catalog/create', function() {
-  return view('catalog.create');
-});
+Route::get('catalog/create', 'CatalogController@getCreate');
 
-Route::get('catalog/edit/{id}', function() {
-  return view('catalog.edit', ['id' => $id]);
-});
+Route::get('catalog/edit/{id}', 'CatalogController@getEdit');
